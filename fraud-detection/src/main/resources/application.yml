@@ -1,0 +1,20 @@
+server.port: 9081
+spring.application.name: fraud-detection
+eureka:
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 1
+  client:
+    instanceInfoReplicationIntervalSeconds: 1
+    registryFetchIntervalSeconds: 1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+         -health
+         -metrics
+         -prometheus
+         
+

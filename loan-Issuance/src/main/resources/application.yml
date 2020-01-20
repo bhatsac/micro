@@ -1,0 +1,17 @@
+server.port: 9082
+spring.application.name: loan-issuance
+eureka:
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 1
+  client:
+    instanceInfoReplicationIntervalSeconds: 1
+    registryFetchIntervalSeconds: 1
+# Currently ribbon is the default load balancer and this will be deprecated soon, hence we can set it to false; 
+# When false  Spring load balancer will be used which will be used in future
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+      
